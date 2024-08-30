@@ -1,3 +1,6 @@
+
+![procedure](./assets/img/procedure.png)
+
 # Activity #1
 This repository contains a MySQL/MariaDB procedure for inserting an item into a database using a newly or recently used primary key.   
 
@@ -34,7 +37,7 @@ The following conditions must be met for this activity:
 
 
 ## Tools
-Here is a list of tools and database management systems that could be used for this activity. Please note that you don't have to install MySQL if you already have MariaD.
+Here is a list of tools and database management systems that could be used for this activity. Please note that you don't have to install MySQL if you already have MariaDB.
 - [MariaDB](https://mariadb.org/download/?t=mariadb&p=mariadb&r=11.5.2)
 - [MySQL](https://dev.mysql.com/downloads/)
 - [phpMyAdmin](https://www.phpmyadmin.net/downloads/)

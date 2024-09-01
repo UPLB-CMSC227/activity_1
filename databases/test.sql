@@ -67,14 +67,15 @@ BEGIN
 	DECLARE currentID INT DEFAULT 1;
   DECLARE nextID INT DEFAULT 1;
   DECLARE output TEXT DEFAULT '';
+  DECLARE name VARCHAR(255);
 	DECLARE cur CURSOR FOR SELECT id FROM accounts;
   DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
     
   OPEN cur;
     
-  query_loop: LOOP
+  read_loop: LOOP
     
-      -- current cursor
+    -- current cursor
     FETCH cur INTO currentID;
 
       /**
@@ -90,11 +91,11 @@ BEGIN
       *|-------------------------|
       *|  id        |     name   |
       *|-------------------------|
-      *|  5         |     test5   |
+      *|  5         |     aaBB5  |
       *|-------------------------|
-      *|  6         |     test6   |
+      *|  6         |     bbCC6  |
       *|-------------------------|
-      *|  7         |     test7   |
+      *|  7         |     ddEE7  |
       *|-------------------------|
       *
       * currentID: 5
@@ -103,7 +104,7 @@ BEGIN
       */
       IF currentID > nextID THEN
         SET output = CONCAT('An old primary_key will be reused: ', nextID);     
-        LEAVE query_loop;
+        LEAVE read_loop;
       END IF;
       
       /**
@@ -116,7 +117,7 @@ BEGIN
         END IF;
         
         SET output = CONCAT('Data will be appended on the list : ', nextID);  
-        LEAVE query_loop;
+        LEAVE read_loop;
       END IF;
       
       /**
@@ -128,6 +129,22 @@ BEGIN
 
 	CLOSE cur;
 
-    SELECT output;
+  SELECT output;
+
+  /**
+  * Generate string in aaBB format
+  * 97 = lowercase a
+  * 65 = uppercase A
+  */
+  SET name = concat(
+      char(round(rand()*25)+97),
+      char(round(rand()*25)+97),
+      char(round(rand()*25)+65),
+      char(round(rand()*25)+65),
+      nextID);
+
+  -- insert data to table    
+  INSERT INTO accounts (id, name) VALUES (nextID, name);
+
 END$$
 DELIMITER ;

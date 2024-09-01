@@ -61,14 +61,14 @@ COMMIT;
 
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_account`() NO SQL
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_account`(IN `param` VARCHAR(5)) NO SQL
 BEGIN
 	DECLARE done INT DEFAULT FALSE;
-	DECLARE currentID INT DEFAULT 1;
+  DECLARE currentID INT DEFAULT 1;
   DECLARE nextID INT DEFAULT 1;
   DECLARE output TEXT DEFAULT '';
   DECLARE name VARCHAR(255);
-	DECLARE cur CURSOR FOR SELECT id FROM accounts;
+  DECLARE cur CURSOR FOR SELECT id FROM accounts;
   DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
     
   OPEN cur;
@@ -91,11 +91,11 @@ BEGIN
       *|-------------------------|
       *|  id        |     name   |
       *|-------------------------|
-      *|  5         |     aaBB5  |
+      *|  5         |     test5   |
       *|-------------------------|
-      *|  6         |     bbCC6  |
+      *|  6         |     test6   |
       *|-------------------------|
-      *|  7         |     ddEE7  |
+      *|  7         |     test7   |
       *|-------------------------|
       *
       * currentID: 5
@@ -130,21 +130,17 @@ BEGIN
 	CLOSE cur;
 
   SELECT output;
-
-  /**
-  * Generate string in aaBB format
-  * 97 = lowercase a
-  * 65 = uppercase A
-  */
-  SET name = concat(
+  IF param IS NULL OR param = '' THEN
+    SET name = concat(
       char(round(rand()*25)+97),
       char(round(rand()*25)+97),
       char(round(rand()*25)+65),
       char(round(rand()*25)+65),
       nextID);
-
-  -- insert data to table    
+  ELSE
+	  SET name = concat(param, nextID);
+  END IF;
+      
   INSERT INTO accounts (id, name) VALUES (nextID, name);
-
 END$$
 DELIMITER ;

@@ -1,8 +1,10 @@
 
-![procedure](./assets/img/terminal.gif)
 
 # Activity #1
 This repository contains a MySQL/MariaDB procedure for inserting an item into a database using a newly or recently used primary key.   
+
+
+![procedure](./assets/img/terminal.gif)
 
 ## Requirements
 The following conditions must be met for this activity:

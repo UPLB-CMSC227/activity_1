@@ -1,0 +1,287 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Applications/XAMPP/xamppfiles/htdocs/cmsc227/activity_1
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 118
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 31
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: MySQL Procedure
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 340
+    content: "\e[?1034hMacBook-Pro-ken:activity_1 jkga$ "
+  - delay: 2104
+    content: /
+  - delay: 383
+    content: A
+  - delay: 149
+    content: p
+  - delay: 120
+    content: plications/
+  - delay: 412
+    content: X
+  - delay: 82
+    content: A
+  - delay: 233
+    content: MPP/
+  - delay: 4949
+    content: b
+  - delay: 192
+    content: i
+  - delay: 184
+    content: 'n'
+  - delay: 1543
+    content: /
+  - delay: 257
+    content: m
+  - delay: 373
+    content: 'y'
+  - delay: 261
+    content: s
+  - delay: 115
+    content: q
+  - delay: 142
+    content: l
+  - delay: 225
+    content: ' '
+  - delay: 479
+    content: '-'
+  - delay: 323
+    content: u
+  - delay: 186
+    content: ' '
+  - delay: 236
+    content: r
+  - delay: 267
+    content: o
+  - delay: 149
+    content: o
+  - delay: 115
+    content: t
+  - delay: 2519
+    content: "\r\n"
+  - delay: 50
+    content: "\e(B\e[0;1mWelcome to the MariaDB monitor.  Commands end with ; or \\g.\r\n\e(B\e[m\e(B\e[0;1mYour MariaDB connection id is 79036\r\nServer version: 10.4.14-MariaDB Source distribution\r\n\r\n\e(B\e[m\e(B\e[0;1mCopyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.\r\n\r\n\e(B\e[m\e(B\e[0;1mType 'help;' or '\\h' for help. Type '\\c' to clear the current input statement.\r\n\r\n\e(B\e[mMariaDB [(none)]> "
+  - delay: 2085
+    content: u
+  - delay: 112
+    content: s
+  - delay: 145
+    content: e
+  - delay: 112
+    content: ' '
+  - delay: 614
+    content: t
+  - delay: 120
+    content: e
+  - delay: 133
+    content: s
+  - delay: 121
+    content: t
+  - delay: 143
+    content: ;
+  - delay: 2487
+    content: "\r\n"
+  - delay: 14
+    content: "Reading table information for completion of table and column names\r\nYou can turn off this feature to get a quicker startup with -A\r\n\r\n\e(B\e[0;1mDatabase changed\r\n\e(B\e[mMariaDB [test]> "
+  - delay: 3000
+    content: S
+  - delay: 97
+    content: E
+  - delay: 125
+    content: T
+  - delay: 300
+    content: ' '
+  - delay: 300
+    content: '@'
+  - delay: 368
+    content: p
+  - delay: 600
+    content: '='
+  - delay: 600
+    content: ''''
+  - delay: 620
+    content: h
+  - delay: 151
+    content: e
+  - delay: 215
+    content: l
+  - delay: 138
+    content: l
+  - delay: 166
+    content: o
+  - delay: 600
+    content: ''''
+  - delay: 1478
+    content: ;
+  - delay: 1447
+    content: ' '
+  - delay: 1013
+    content: C
+  - delay: 170
+    content: A
+  - delay: 210
+    content: L
+  - delay: 159
+    content: L
+  - delay: 1199
+    content: ' '
+  - delay: 726
+    content: i
+  - delay: 108
+    content: 'n'
+  - delay: 231
+    content: s
+  - delay: 159
+    content: e
+  - delay: 198
+    content: r
+  - delay: 205
+    content: t
+  - delay: 715
+    content: _
+  - delay: 276
+    content: a
+  - delay: 270
+    content: c
+  - delay: 128
+    content: c
+  - delay: 141
+    content: o
+  - delay: 91
+    content: u
+  - delay: 211
+    content: 'n'
+  - delay: 146
+    content: t
+  - delay: 806
+    content: (
+  - delay: 743
+    content: '@'
+  - delay: 651
+    content: p
+  - delay: 473
+    content: )
+  - delay: 764
+    content: ;
+  - delay: 332
+    content: "\r\n"
+  - delay: 5
+    content: "\e(B\e[0;1mQuery OK, 0 rows affected (0.002 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n"
+  - delay: 15
+    content: "\e(B\e[m+---------------------------------------+\r\n| output                                |\r\n+---------------------------------------+\r\n| Data will be appended on the list : 9 |\r\n+---------------------------------------+\r\n\e(B\e[0;1m1 row in set (0.015 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[m\e(B\e[0;1mQuery OK, 1 row affected (0.018 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [test]> "
+  - delay: 4445
+    content: e
+  - delay: 118
+    content: x
+  - delay: 122
+    content: i
+  - delay: 429
+    content: t
+  - delay: 1523
+    content: "\r\n\e(B\e[0;1mBye\r\n\e(B\e[mMacBook-Pro-ken:activity_1 jkga$ "
+  - delay: 2475
+    content: "logout\r\n"

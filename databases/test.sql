@@ -63,7 +63,7 @@ COMMIT;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_account`(IN `param` VARCHAR(5)) NO SQL
 BEGIN
-	DECLARE done INT DEFAULT FALSE;
+  DECLARE done INT DEFAULT FALSE;
   DECLARE currentID INT DEFAULT 1;
   DECLARE nextID INT DEFAULT 1;
   DECLARE output TEXT DEFAULT '';
@@ -127,7 +127,7 @@ BEGIN
 
   END LOOP;
 
-	CLOSE cur;
+  CLOSE cur;
 
   SELECT output;
   IF param IS NULL OR param = '' THEN

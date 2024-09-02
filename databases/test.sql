@@ -129,7 +129,15 @@ BEGIN
 
   CLOSE cur;
 
+  -- Show logs
   SELECT output;
+
+  /**
+  * Generate 4 characters + ID
+  *
+  * This will generate a random characters in aaBB+ID format if the input
+  * parameter has no value or empty, otherwise, use the given value
+  */
   IF param IS NULL OR param = '' THEN
     SET name = concat(
       char(round(rand()*25)+97),
@@ -138,9 +146,10 @@ BEGIN
       char(round(rand()*25)+65),
       nextID);
   ELSE
-	  SET name = concat(param, nextID);
+    SET name = concat(param, nextID);
   END IF;
-      
+  
+  -- Insert data to the table
   INSERT INTO accounts (id, name) VALUES (nextID, name);
 END$$
 DELIMITER ;
